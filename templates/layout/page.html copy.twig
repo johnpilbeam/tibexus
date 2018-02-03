@@ -1,4 +1,4 @@
-	{#
+{#
 /**
  * @file
  * Bartik's theme implementation to display a single page.
@@ -75,8 +75,10 @@
         <ul class="slides">
           <li>
             <img src="{{ base_path ~ 'themes/tibexus/assets/images/slide-image-1.jpg' }}"/>
-            {{ slide1_head|striptags }}
             {% if slide1_head or slide1_desc %}
+              {% if slide1_head %}
+                {{ slide1_head|striptags }}
+              {% endif %}
               <div class="flex-caption">
                 <h2>{{ slide1_head|striptags }}</h2>{{ slide1_desc|striptags }}
                 <a class="frmore" href="{{ slide1_url|striptags }}">{{ 'Read More'|t }}</a>
@@ -86,6 +88,9 @@
           <li>
             <img src="{{ base_path ~ 'themes/tibexus/assets/images/slide-image-2.jpg' }}"/>
             {% if slide2_head or slide2_desc %}
+              {% if slide2_head %}
+                {{ slide2_head|striptags }}
+              {% endif %}
               <div class="flex-caption">
                 <h2>{{ slide2_head|striptags }}</h2>{{ slide2_desc|striptags }}
                 <a class="frmore" href="{{ slide2_url|striptags }}">{{ 'Read More'|t }}</a>
@@ -95,6 +100,9 @@
           <li>
             <img src="{{ base_path ~ 'themes/tibexus/assets/images/slide-image-3.jpg' }}"/>
             {% if slide3_head or slide3_desc %}
+              {% if slide3_head %}
+                {{ slide3_head|striptags }}
+              {% endif %}
               <div class="flex-caption">
                 <h2>{{ slide3_head|striptags }}</h2>{{ slide3_desc|striptags }}
                 <a class="frmore" href="{{ slide3_url|striptags }}">{{ 'Read More'|t }}</a>
@@ -223,12 +231,18 @@
   {% endif %}
 
   <footer id="colophon" class="site-footer" role="contentinfo">
-    <div class="container">
+     <div class="container">
       <div class="row">
         <div class="fcred col-sm-12">
-          {{ "Copyright"|t }} &copy; {{ this_year }} Tibetan Law.
+        <div id="logos">
+          <a href="http://www.ahrc.ac.uk/"><img id="ahrc-logo" class="logo" src="{{ base_path ~ 'themes/tibexus/assets/images/ahrc-logo.png' }}"/></a>
+          <a href="https://www.law.ox.ac.uk/centres-institutes/centre-socio-legal-studies"><img id="csls-logo" class="logo" src="{{ base_path ~ 'themes/tibexus/assets/images/csls-logo.png' }}"/></a>
+        </div>  
+        <p>Legal Ideology in Tibet: Politics, Practice, and Religion is funded by the Arts and Humanities Research Council of the United Kingdom and based at the Centre for Socio-Legal Studies, University of Oxford<br />
+          Dragon images &copy; Robert Beer.<br />
+          Content &copy; {{ this_year }} Tibetan Law.</p>
         </div>
       </div>
     </div>
-  </div>
+  </footer>
 </div>

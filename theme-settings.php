@@ -12,7 +12,7 @@
 function tibexus_form_system_theme_settings_alter(&$form, &$form_state) {
   $form['tibexus_settings'] = array(
     '#type' => 'fieldset',
-    '#title' => t('tibexus Settings'),
+    '#title' => t('Tibexus Settings'),
     '#collapsible' => FALSE,
     '#collapsed' => FALSE,
   );

@@ -1,8 +1,8 @@
 /*
-Tibexus Theme by John Pilbeam (Based on Nexus by www.devsaran.com)
+www.devsaran.com
 */
 
-@import url(http://fonts.googleapis.com/css?family=Oxygen:400,300,700);
+@import url(https://fonts.googleapis.com/css?family=Oxygen:400,300,700);
 
 
 /* Reset
@@ -55,11 +55,11 @@ body {
 
 /* Links */
 a {
-  color: #00917E;
+  color: #f4473a;
 
 }
 a:visited {
-  color: #00917E;
+  color: #f4473a;
 }
 a:hover,
 a:focus,
@@ -304,7 +304,7 @@ h1#site-title a:link, h1#site-title a:visited{
   right: 20px;
   top:25px;
   font-size: 20px;
-  /* display:none; */
+  display:none;
 }
 
 #main-menu {
@@ -317,7 +317,6 @@ h1#site-title a:link, h1#site-title a:visited{
 
 #main-menu ul {
   width: auto;
-  /* width: 90em; */
   float:left;
   list-style: none;
   margin: 0;
@@ -343,7 +342,7 @@ h1#site-title a:link, h1#site-title a:visited{
 }
 
 #main-menu li a:hover, #main-menu li a:active, #main-menu a.active, #main-menu > ul > li > a.active-trail {
-  color: #7FC7AF;
+  color: #ed564b;
 }
 
 #main-menu li a.sf-with-ul {
@@ -368,7 +367,7 @@ h1#site-title a:link, h1#site-title a:visited{
 
 
 #main-menu li ul li a:hover ,#main-menu li ul li ul li a:hover ,#main-menu li ul li ul li ul li a:hover {
-  color: #7FC7AF;
+  color: #ed564b;
 }
 
 #main-menu li ul {
@@ -484,7 +483,7 @@ a.frmore{
 }
 
 #preface-area {
-  background: none repeat scroll 0 0 #7FC7AF;
+  background: none repeat scroll 0 0 #ED564B;
   border-bottom: 5px solid #F96B61;
   border-top: 5px solid #F96B61;
   padding: 40px 0 20px;
@@ -507,10 +506,9 @@ a.frmore{
 
 
 #bottom{
-/*  padding: 20px 0px 40px 0px; */
-  padding: 0;
+  padding: 20px 0px 40px 0px;
   background: #3b3b3b;
-  border-top:5px solid #7FC7AF;
+  border-top:5px solid #ed564b;
 }
 
 .footer-block{
@@ -529,7 +527,7 @@ a.frmore{
 
 .site-footer{
   padding: 10px 0px;
-  background: #3b3b3b;
+  background:#292929;
   font-size: 12px;
 }
 
@@ -1002,7 +1000,7 @@ ul.inline, ul.links.inline {
 }
 
 .field-name-field-tags a{
-  background: #7FC7AF;
+  background: #ed564b;
   margin-right: 5px;
   margin-bottom: 5px;
   border-radius: 2px;
@@ -1150,6 +1148,22 @@ border-left: 1px solid; border-right: 1px solid; height: 40px; margin-left: -36p
     content: "»";
 }
 
+@media (max-width: 992px) {
+  .flex-caption {
+    top: 50%;
+    margin-top: -84px;
+    padding: 0 150px;
+  }
+  .flex-direction-nav .flex-prev,
+  .flex-direction-nav .flex-next {
+    z-index: 1000;
+  }
+  .flex-direction-nav .flex-prev:hover,
+  .flex-direction-nav .flex-next:hover {
+    z-index: 1012;
+  }
+}
+
 @media screen and (max-width: 768px) {
   html{
     font-size: 60%;
@@ -1168,22 +1182,127 @@ border-left: 1px solid; border-right: 1px solid; height: 40px; margin-left: -36p
     margin-bottom: 20px;
   }
 
+  #main-menu{
+    display:none;
+  }
+
+  /*.flex-caption{
+    display: none;
+  }*/
+
+}
+
+@media (max-width: 640px) {
+  .flex-direction-nav a {
+    width: 40px;
+    height: 50px;
+    /*margin: -50px 0 0;*/
+    display: block;
+    background-image: url(../images/bg_direction_nav.png);
+    position: absolute;
+    top: 50%;
+    z-index: 110;
+    cursor: pointer;
+    text-indent: -9999px;
+    background-repeat: no-repeat;
+    background-position: top -24px left -6px;
+    margin-top: -30px;
+  }
+  .flex-direction-nav .flex-next {
+    background-position: top -24px left -53px;
+  }
+  .flexslider:hover .flex-next:hover,
+  .flexslider:hover .flex-prev:hover {background-position-y: -124px;}
+  .flex-caption {
+    margin-top: -66px;
+    padding: 0 210px;
+    line-height: normal;
+  }
+  .flex-caption h2 {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  .flex-direction-nav a {
+    width: 28px;
+    background-size: 70px;
+    background-position: top -10px left -4px;
+  }
+  .flex-direction-nav .flex-next {
+    background-position: top -10px left -38px;
+  }
+  .flexslider:hover .flex-next:hover,
+  .flexslider:hover .flex-prev:hover {background-position-y: -80px;}
+  .flex-caption {
+    padding: 0px 242px;
+    font-size: 13px;
+  }
+  .flex-caption h2 {
+    font-size: 19px;
+  }
+  .flex-caption a.frmore {
+    margin-top: 5px;
+  }
+}
+
+@media (max-width: 380px) {
+  .flex-caption {
+    padding: 0px 272px;
+  }
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Tibexus Theme by John Pilbeam (sub-theme for Tibexus by www.devsaran.com)
+*/
+
+/* Links */
+a {
+  color: #00917E;
+  }
+  
+a:visited {
+  color: #00917E;
+}  
+
+.menutoggle{
+  /* display:none; */
+}
+
+#main-menu li a:hover, #main-menu li a:active, #main-menu a.active, #main-menu > ul > li > a.active-trail {
+  color: #7FC7AF;
+}
+
+#main-menu li ul li a:hover ,#main-menu li ul li ul li a:hover ,#main-menu li ul li ul li ul li a:hover {
+  color: #7FC7AF;
+}
+
+#preface-area {
+  background: none repeat scroll 0 0 #7FC7AF;
+}
+
+#bottom{
+  padding: 0;
+  border-top:5px solid #7FC7AF;
+}
+
+.site-footer{
+  background: #3b3b3b;
+}
+
+.field-name-field-tags a{
+  background: #7FC7AF;
+}
+
 /*  #main-menu{
     display:none;
   }
 */
 
-
-  .flex-caption{
+ .flex-caption{
     display: none;
   }
-
-}
-
-@media screen and (max-width: 410px) {
-#main-menu ul {
-  width: 100%;
-}
 
 #main-menu li a {
   display: inline;
@@ -1225,3 +1344,11 @@ div#logos {float:left;}
 div#logos img#ahrc-logo {width:260px;}
 div#logos img#csls-logo {width:67px;}
 }
+
+#site-logo > a > img {height: 80px; width:80px;}
+
+/* Fix slideshow 2018-01-29 */
+.flex-caption {
+    display: block;
+}
+

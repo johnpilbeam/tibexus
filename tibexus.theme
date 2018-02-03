@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Functions to support theming in the tibexus theme.
+ * Functions to support theming in the Tibexus theme.
  */
 
 /**
@@ -37,15 +37,6 @@ function tibexus_preprocess_page(&$variables) {
 
 
 }
-
-function tibexus_preprocess_html(&$variables) {
-  // Add node id to the body class.
-  $node = \Drupal::routeMatch()->getParameter('node');
-  if($node) {
-    $variables['attributes']['class'][] = 'node-' . $node->id();
-  }
-}
-
 
 /**
  * Prepares variables for comment templates.

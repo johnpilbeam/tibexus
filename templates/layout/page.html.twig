@@ -1,4 +1,4 @@
-	{#
+{#
 /**
  * @file
  * Bartik's theme implementation to display a single page.
@@ -69,41 +69,35 @@
     </div>
   </header>
   {% if is_front %}
-    {{ attach_library('tibexus/slider-js') }}
+   {{ attach_library('tibexus/slider-js') }}
     {% if slideshow_display %}
-      <div id="slidebox" class="flexslider">
+       <div id="slidebox" class="flexslider">
         <ul class="slides">
-          <li>
-            <img src="{{ base_path ~ 'themes/tibexus/assets/images/slide-image-1.jpg' }}"/>
-            {% if slide1_head or slide1_desc %}
-              <div class="flex-caption">
-                <h2>{{ slide1_head|striptags }}</h2>{{ slide1_desc }}
-                <a class="frmore" href="{{ slide1_url|striptags }}">{{ 'Read More'|t }}</a>
+          <li style="display: list-item;">
+            <img src="/themes/tibexus/assets/images/slide-image-1.jpg">
+                  <div class="flex-caption">
+                <h2>Legal Ideology in Tibet</h2>As the Tibetan empire collapsed in the ninth and tenth centuries <span class="small-caps">ad</span>, new ideas emerged concerning the nature of Tibetan law and its relationship with Buddhist morality.
+                <a class="frmore" href="/project">Read More</a>
               </div>
-            {% endif %}
-          </li>
+                      </li>
 <!-- Remove last 2 slides        <li>
-            <img src="{{ base_path ~ 'themes/tibexus/assets/images/slide-image-2.jpg' }}"/>
-            {% if slide2_head or slide2_desc %}
-              <div class="flex-caption">
-                <h2>{{ slide2_head|striptags }}</h2>{{ slide2_desc|striptags }}
-                <a class="frmore" href="{{ slide2_url|striptags }}">{{ 'Read More'|t }}</a>
+            <img src="/themes/tibexus/assets/images/slide-image-2.jpg"/>
+                          <div class="flex-caption">
+                <h2>Texts</h2>Read copies, summaries, translations, and indexes of the relevant documents in Tibet’s legal tradition.
+                <a class="frmore" href="/texts">Read More</a>
               </div>
-            {% endif %}
-          </li>
+                      </li>
           <li>
-            <img src="{{ base_path ~ 'themes/tibexus/assets/images/slide-image-3.jpg' }}"/>
-            {% if slide3_head or slide3_desc %}
-              <div class="flex-caption">
-                <h2>{{ slide3_head|striptags }}</h2>{{ slide3_desc|striptags }}
-                <a class="frmore" href="{{ slide3_url|striptags }}">{{ 'Read More'|t }}</a>
+            <img src="/themes/tibexus/assets/images/slide-image-3.jpg"/>
+                          <div class="flex-caption">
+                <h2>Contact us</h2>Contact the researchers on this project.
+                <a class="frmore" href="/contact">Read More</a>
               </div>
-            {% endif %}
-          </li> -->
+                      </li> -->
         </ul><!-- /slides -->
         <div class="doverlay"></div>
       </div>
-    {% endif %}   
+    {% endif %}
   {% endif %}
 
   {% if page.preface_first or page.preface_second or page.preface_third %}
@@ -222,7 +216,7 @@
   {% endif %}
 
   <footer id="colophon" class="site-footer" role="contentinfo">
-    <div class="container">
+     <div class="container">
       <div class="row">
         <div class="fcred col-sm-12">
         <div id="logos">
@@ -230,9 +224,10 @@
           <a href="https://www.law.ox.ac.uk/centres-institutes/centre-socio-legal-studies"><img id="csls-logo" class="logo" src="{{ base_path ~ 'themes/tibexus/assets/images/csls-logo.png' }}"/></a>
         </div>  
         <p>Legal Ideology in Tibet: Politics, Practice, and Religion is funded by the Arts and Humanities Research Council of the United Kingdom and based at the Centre for Socio-Legal Studies, University of Oxford<br />
-          {{ "Copyright"|t }} &copy; {{ this_year }} Tibetan Law.</p>
+          Dragon images &copy; Robert Beer.<br />
+          Content &copy; {{ this_year }} Tibetan Law.</p>
         </div>
       </div>
     </div>
-  </div>
+  </footer>
 </div>
